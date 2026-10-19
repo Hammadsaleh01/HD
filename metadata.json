@@ -1,0 +1,6 @@
+{
+  "name": "PlateShare",
+  "description": "Real-time food donation platform connecting restaurants, NGOs, and volunteers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

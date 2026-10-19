@@ -1,0 +1,14 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+plateshare_db.json
+plateshare_db.json.tmp
+*.db
+*.db-journal
+*.tmp
+bun.lock*

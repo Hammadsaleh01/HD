@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  /* Primary Forest & Vibrant Greens */
+  --color-forest-950: #0a2518;
+  --color-forest-900: #0e3b26;
+  --color-forest-800: #125235;
+  --color-forest-700: #176b45;
+  --color-forest-600: #1d8254;
+  --color-forest-500: #2fa66a;
+  --color-forest-400: #4ebd83;
+  --color-forest-300: #7ed4a5;
+  --color-forest-200: #b2e7c9;
+  --color-forest-100: #daf4e5;
+  --color-forest-50: #eef9f2;
+
+  /* Warm Cream & Earthy Neutrals */
+  --color-cream-900: #383427;
+  --color-cream-800: #575241;
+  --color-cream-700: #7e7762;
+  --color-cream-600: #aba38a;
+  --color-cream-500: #cac3ac;
+  --color-cream-400: #ded9c7;
+  --color-cream-300: #ebe7d8;
+  --color-cream-200: #f4f1e6;
+  --color-cream-100: #f7f6ef;
+  --color-cream-50: #faf9f5;
+
+  /* Deep Charcoal Slate Text */
+  --color-charcoal-950: #101613;
+  --color-charcoal-900: #16201a;
+  --color-charcoal-800: #222e27;
+  --color-charcoal-700: #334239;
+  --color-charcoal-600: #495a50;
+  --color-charcoal-500: #65776d;
+  --color-charcoal-400: #899c92;
+  --color-charcoal-300: #b1c1b8;
+  --color-charcoal-200: #d6e1db;
+  --color-charcoal-100: #ecf2ee;
+  --color-charcoal-50: #f5f8f6;
+}
+
+/* Custom smooth styling tweaks */
+body {
+  font-family: var(--font-sans);
+  background-color: #F7F6EF;
+  color: #16201A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom scrollbar behaviors */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5cb;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ab0a3;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+.animate-float {
+  /* Reduced decorative float to prevent visual distraction */
+  transform: none;
+}
+
+.animate-float-reverse {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
